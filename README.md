@@ -1,0 +1,4 @@
+# EncryptedChatroom
+A encrypted chatroom that implements a RESTful API and leverages both public-key (2048-bit RSA) and private-key (AES-256) encryption to securely transmit and store messages.
+
+This project contains code for my final project done for my Independent Study in Applied Cryptography at The Lawrenceville School under Dr. Keith Voss. This project includes a PHP RESTful server that can be connected to a database, as well as a Java client implementation of an encrypted chatroom. The encryption functions in two stages: first, using a public database of public keys, each chat client generates a new AES-256 secret key to encrypt a message, then encrypts it with 2048-bit RSA. The encrypted secret key, ciphertext, as well as a signed timestamp, are sent to the PHP server with a POST. Each client then pings the server for new messages that it can decrypt. 
